@@ -51,4 +51,3 @@ Este projeto é para fins educacionais e não possui licença específica.
 ---
 
 ⭐ Se este repositório foi útil, dê uma estrela!</content>
-<parameter name="filePath">c:\Users\a10435\Desktop\dev\README.md

@@ -1,3 +1,16 @@
+"""
+Este programa simula um sistema de login bancário simples.
+Ele verifica se o usuário e senha fornecidos correspondem a um dos usuários cadastrados em uma lista.
+Se o login for bem-sucedido, chama uma função para operações bancárias (ainda não implementada).
+
+Conceitos praticados:
+- Listas e dicionários
+- Loops (for)
+- Entrada de dados (input)
+- Estruturas condicionais (if-else)
+- Funções
+"""
+
 def rodar_banco():
     print("operações bancárias")
     return None

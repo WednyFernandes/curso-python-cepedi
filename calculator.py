@@ -1,3 +1,17 @@
+"""
+Este programa implementa uma calculadora simples que aceita operações aritméticas básicas
+através de entrada de texto no formato "número operador número" (ex: "2+3").
+Ele identifica o operador e realiza a operação correspondente, com validações básicas.
+
+Conceitos praticados:
+- Funções
+- Estruturas condicionais (if-elif)
+- Manipulação de strings (split)
+- Conversão de tipos (float)
+- Entrada de dados (input)
+- Loops (while implícito no input de continuação)
+"""
+
 multiplicacao = "*"
 divisao = "/"
 soma = "+"
