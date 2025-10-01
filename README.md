@@ -19,6 +19,9 @@ Aqui está uma lista dos arquivos incluídos, com uma breve descrição de cada 
 - **`medianota.py`** - Calcula a média de três notas e determina se o aluno está aprovado, em recuperação ou reprovado.
 - **`roboed.py`** - Programa relacionado a robótica ou edição, possivelmente um exercício de automação.
 - **`triarea.py`** - Calcula a área de um triângulo com base na fórmula (base * altura) / 2.
+- **`contadorwhile.py`** - Contador simples usando loop while, imprime números de 1 a 5.
+- **`loginsenhatester.py`** - Simulador de login com verificação de senha e limite de tentativas.
+- **`triangulotipador.py`** - Classifica o tipo de triângulo (equilátero, isósceles ou escaleno) com base nos lados.
 
 ## 🚀 Como Executar
 
