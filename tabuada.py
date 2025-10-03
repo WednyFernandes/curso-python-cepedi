@@ -6,3 +6,10 @@ for i in range(começo, final + 1):
     for j in range(1, 11):
         resultado = i * j
         print(f"{i} x {j} = {resultado}")
+
+if final < começo:
+    for i in reversed(range(final, começo + 1)):
+        print(f"\nTabuada do {i} (de trás para frente):")
+        for j in (range(1, 11)):
+            resultado = i * j
+            print(f"{i} x {j} = {resultado}")
