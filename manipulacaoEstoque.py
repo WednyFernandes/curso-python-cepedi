@@ -1,3 +1,13 @@
+"""
+Este programa manipula uma lista de estoque, permitindo adicionar novos itens e exibir a lista atualizada.
+
+Conceitos praticados:
+- Listas
+- Métodos de listas (append)
+- Entrada de dados (input)
+- Função print()
+"""
+
 estoque = ["Labubu","Bobbie Goods","Metanol"]
 print(f"\nLista atual: {estoque}")
 

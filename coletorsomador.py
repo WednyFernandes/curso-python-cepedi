@@ -1,3 +1,13 @@
+"""
+Este programa coleta números digitados pelo usuário até que um valor de parada seja informado, e soma todos os valores inseridos.
+
+Conceitos praticados:
+- Listas
+- Laço while
+- Entrada de dados (input)
+- Conversão de tipos
+"""
+
 numeroslista = []
 
 parador = 1

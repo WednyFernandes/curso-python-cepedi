@@ -1,3 +1,15 @@
+"""
+Este programa checa se uma pessoa é maior ou menor de idade, recebendo nome e idade em um loop.
+Permite encerrar digitando 00 em qualquer campo.
+
+Conceitos praticados:
+- Funções
+- Estruturas condicionais (if-else)
+- Entrada de dados (input)
+- Conversão de tipos (int)
+- Laço while
+"""
+
 print("Bem vindo ao checador de maioridade \nDigite 00 em qualquer campo para encerrar")
 nomeG = None
 idadeG = None

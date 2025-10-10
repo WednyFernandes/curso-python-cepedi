@@ -1,3 +1,12 @@
+"""
+Este programa manipula uma lista de notas e calcula a média das três últimas.
+
+Conceitos praticados:
+- Listas
+- Fatiamento de listas
+- Cálculo de média
+"""
+
 notas = [1,2.5,2,7,9.5]
 ultimas_tres = notas[-3:]
 media = 0

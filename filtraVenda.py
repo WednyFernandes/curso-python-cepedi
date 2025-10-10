@@ -1,3 +1,13 @@
+"""
+Este programa solicita ao usuário nomes de produtos e armazena em uma lista.
+Permite filtrar ou manipular a lista conforme a lógica do exercício.
+
+Conceitos praticados:
+- Listas
+- Laço for
+- Entrada de dados (input)
+"""
+
 lista_de_compras = []
 
 for i in range(2):

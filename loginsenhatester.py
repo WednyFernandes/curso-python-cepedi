@@ -1,3 +1,15 @@
+"""
+Este programa simula um sistema de login simples com senha.
+O usuário tem até 3 tentativas para acertar a senha correta.
+Exibe mensagens de sucesso ou erro conforme as tentativas.
+
+Conceitos praticados:
+- Entrada de dados (input)
+- Estruturas de repetição (while)
+- Estruturas condicionais (if-else)
+- Contadores e controle de fluxo
+"""
+
 senha = "python123"
 
 max_tentativas = 3

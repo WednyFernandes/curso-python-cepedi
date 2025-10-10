@@ -1,3 +1,13 @@
+"""
+Este programa solicita um valor de venda e uma porcentagem de imposto, e calcula o valor do imposto sobre a venda.
+
+Conceitos praticados:
+- Funções
+- Entrada de dados (input)
+- Conversão de tipos (float)
+- Operações aritméticas
+"""
+
 valor_digitado = 0
 imposto_digitado = 0
 

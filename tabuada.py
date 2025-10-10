@@ -1,3 +1,13 @@
+"""
+Este programa imprime a tabuada de multiplicação para um intervalo de números informado pelo usuário.
+
+Conceitos praticados:
+- Laço for
+- Entrada de dados (input)
+- Operações aritméticas
+- Função print()
+"""
+
 começo = int(input("Digite o número inicial para ver a tabuada: "))
 final = int(input("Digite o número final da tabuada: "))
 

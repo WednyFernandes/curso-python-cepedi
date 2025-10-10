@@ -1,3 +1,13 @@
+"""
+Este programa soma todos os números pares de 1 até o número informado pelo usuário.
+
+Conceitos praticados:
+- Laço for
+- Estruturas condicionais (if)
+- Operações aritméticas
+- Entrada de dados (input)
+"""
+
 numero = int(input("Digite um número: "))
 soma = 0
 

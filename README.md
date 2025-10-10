@@ -1,51 +1,79 @@
-# 🐍 Python Course - CEPEDI
 
-Bem-vindo ao repositório dos exercícios do curso de Python do CEPEDI! Este projeto contém uma coleção de programas simples em Python, desenvolvidos como parte do aprendizado básico da linguagem.
+# 🐍 Curso de Python - CEPEDI
 
-## 📋 Descrição
+![GitHub repo size](https://img.shields.io/github/repo-size/WednyFernandes/curso-python-cepedi)
+![GitHub last commit](https://img.shields.io/github/last-commit/WednyFernandes/curso-python-cepedi)
+![GitHub stars](https://img.shields.io/github/stars/WednyFernandes/curso-python-cepedi?style=social)
 
-Este repositório inclui diversos exercícios práticos que cobrem conceitos fundamentais do Python, como entrada de dados, operações matemáticas, estruturas condicionais e loops. Cada arquivo representa um exercício específico, demonstrando aplicações práticas dos conceitos aprendidos.
+Bem-vindo ao repositório dos exercícios do curso de Python do CEPEDI! Este projeto reúne programas simples desenvolvidos para o aprendizado dos fundamentos da linguagem Python.
 
-## 📁 Arquivos do Projeto
+---
 
-Aqui está uma lista dos arquivos incluídos, com uma breve descrição de cada um:
+## ✨ Visão Geral
 
-- **`banco.py`** - Simulação de operações bancárias básicas.
-- **`calculator.py`** - Calculadora simples que realiza operações aritméticas (+, -, *, /) com entrada de texto.
-- **`ehpar.py`** - Verifica se um número é maior que 10 e se a soma de dois números é par ou ímpar.
-- **`first.py`** - Primeiro programa em Python, introdução básica.
-- **`idadevsvalor.py`** - Comparação de idade e valor, possivelmente para descontos ou categorias.
-- **`ifelse.py`** - Exemplos de uso de estruturas condicionais (if-else).
-- **`medianota.py`** - Calcula a média de três notas e determina se o aluno está aprovado, em recuperação ou reprovado.
-- **`roboed.py`** - Programa relacionado a robótica ou edição, possivelmente um exercício de automação.
-- **`triarea.py`** - Calcula a área de um triângulo com base na fórmula (base * altura) / 2.
-- **`contadorwhile.py`** - Contador simples usando loop while, imprime números de 1 a 5.
-- **`loginsenhatester.py`** - Simulador de login com verificação de senha e limite de tentativas.
-- **`triangulotipador.py`** - Classifica o tipo de triângulo (equilátero, isósceles ou escaleno) com base nos lados.
+Este repositório contém exercícios práticos que abordam:
+- Entrada e saída de dados
+- Operações matemáticas
+- Estruturas condicionais (`if`, `else`, `elif`)
+- Laços de repetição (`for`, `while`)
+- Lógica básica de programação
+
+Cada arquivo representa um exercício independente, com aplicações diretas dos conceitos estudados.
+
+## 📁 Exercícios Disponíveis
+
+| Arquivo                  | Descrição                                                                 |
+|--------------------------|---------------------------------------------------------------------------|
+| `banco.py`               | Simulação de operações bancárias básicas                                  |
+| `calculator.py`          | Calculadora simples (+, -, *, /) com entrada de texto                     |
+| `ehpar.py`               | Verifica se número > 10 e se soma de dois números é par ou ímpar           |
+| `first.py`               | Primeiro programa em Python, introdução básica                            |
+| `idadevsvalor.py`        | Comparação de idade e valor (descontos/categorias)                        |
+| `ifelse.py`              | Exemplos de uso de estruturas condicionais                                |
+| `medianota.py`           | Calcula média de três notas e status do aluno                             |
+| `roboed.py`              | Exercício relacionado a robótica ou automação                             |
+| `triarea.py`             | Calcula a área de um triângulo                                            |
+| `contadorwhile.py`       | Contador simples usando loop while                                        |
+| `loginsenhatester.py`    | Simulador de login com verificação de senha e limite de tentativas        |
+| `triangulotipador.py`    | Classifica o tipo de triângulo (equilátero, isósceles, escaleno)          |
+
+---
 
 ## 🚀 Como Executar
 
-Para executar qualquer um dos programas, certifique-se de ter o Python instalado em seu sistema (versão 3.x recomendada). Abra o terminal na pasta do projeto e execute:
+1. **Pré-requisitos:**
+	- Python 3.x instalado ([Download Python](https://www.python.org/downloads/))
+	- Terminal ou prompt de comando básico
 
-```bash
-python nome_do_arquivo.py
-```
+2. **Clone o repositório:**
+	```bash
+	git clone https://github.com/WednyFernandes/curso-python-cepedi.git
+	cd curso-python-cepedi
+	```
 
-Por exemplo:
-```bash
-python medianota.py
-```
+3. **Execute um exercício:**
+	```bash
+	python nome_do_arquivo.py
+	```
+	Exemplo:
+	```bash
+	python medianota.py
+	```
 
-Siga as instruções na tela para inserir os dados necessários.
+Siga as instruções exibidas no terminal para cada exercício.
 
-## 📚 Pré-requisitos
+---
 
-- Python 3.x instalado
-- Conhecimento básico de terminal/comando
+## 🤝 Como Contribuir
 
-## 🤝 Contribuição
+Contribuições são bem-vindas! Para contribuir:
+1. Faça um fork deste repositório
+2. Crie um branch com sua feature ou correção: `git checkout -b minha-feature`
+3. Commit suas alterações: `git commit -m 'feat: minha nova feature'`
+4. Push para o branch: `git push origin minha-feature`
+5. Abra um Pull Request
 
-Este é um projeto educacional. Sinta-se à vontade para explorar, modificar e aprender com os códigos!
+---
 
 ## 📄 Licença
 
@@ -53,4 +81,4 @@ Este projeto é para fins educacionais e não possui licença específica.
 
 ---
 
-⭐ Se este repositório foi útil, dê uma estrela!</content>
+⭐ Se este repositório foi útil, deixe sua estrela!

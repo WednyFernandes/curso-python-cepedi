@@ -1,3 +1,13 @@
+"""
+Este programa identifica números primos em um intervalo informado pelo usuário.
+
+Conceitos praticados:
+- Entrada de dados (input)
+- Laço for
+- Listas
+- Estruturas condicionais
+"""
+
 import time
 
 primos = []
