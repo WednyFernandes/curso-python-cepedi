@@ -22,20 +22,7 @@ Cada arquivo representa um exercício independente, com aplicações diretas dos
 
 ## 📁 Exercícios Disponíveis
 
-| Arquivo                  | Descrição                                                                 |
-|--------------------------|---------------------------------------------------------------------------|
-| `banco.py`               | Simulação de operações bancárias básicas                                  |
-| `calculator.py`          | Calculadora simples (+, -, *, /) com entrada de texto                     |
-| `ehpar.py`               | Verifica se número > 10 e se soma de dois números é par ou ímpar           |
-| `first.py`               | Primeiro programa em Python, introdução básica                            |
-| `idadevsvalor.py`        | Comparação de idade e valor (descontos/categorias)                        |
-| `ifelse.py`              | Exemplos de uso de estruturas condicionais                                |
-| `medianota.py`           | Calcula média de três notas e status do aluno                             |
-| `roboed.py`              | Exercício relacionado a robótica ou automação                             |
-| `triarea.py`             | Calcula a área de um triângulo                                            |
-| `contadorwhile.py`       | Contador simples usando loop while                                        |
-| `loginsenhatester.py`    | Simulador de login com verificação de senha e limite de tentativas        |
-| `triangulotipador.py`    | Classifica o tipo de triângulo (equilátero, isósceles, escaleno)          |
+Este repositório contém diversos exercícios práticos que abordam conceitos fundamentais de Python, como entrada e saída de dados, estruturas condicionais, laços de repetição, manipulação de listas e strings, funções, dicionários e operações aritméticas. Cada arquivo representa um exercício independente com aplicações diretas dos conceitos estudados.
 
 ---
 

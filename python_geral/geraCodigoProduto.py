@@ -1,3 +1,13 @@
+"""
+Este programa gera um código único para um produto baseado no nome e ano.
+Ele extrai partes do nome do produto e combina com o ano para formar um código.
+
+Conceitos praticados:
+- Manipulação de strings (fatiamento)
+- Funções
+- Formatação de saída
+"""
+
 nome_produto = "SMARTPHONE GALAXY S21"
 ano_produto =  "2025"
 
