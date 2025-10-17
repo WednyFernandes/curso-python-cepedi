@@ -50,7 +50,16 @@ Crie a landing page do meu app de sugestão de upgrades de PC com design system 
 3. Seção de benefícios (3-4 cards): velocidade, economia, facilidade
 4. Depoimentos/Social Proof (pode ser mock inicial)
 5. FAQ acordeão
-6. Footer com links importantes
+6. Footer com links importantes:
+   - Política de Privacidade
+   - Termos de Uso
+   - Contato
+   - Sobre
+
+**Compliance & Legal (obrigatório):**
+- Banner de cookies (LGPD compliant) com opt-in/opt-out claro
+- Disclaimer visível: "Recebemos comissões de lojas parceiras. Preços e disponibilidade sujeitos a alteração."
+- Link para Política de Privacidade acessível em todas as páginas
 
 **UX Writing para o botão principal (escolha o melhor):**
 - "🚀 Descobrir Meu Upgrade Ideal"
@@ -74,18 +83,30 @@ Preciso criar um sistema para coletar informações de hardware do PC do usuári
 - Compile para .exe com PyInstaller com assinatura digital
 - O .exe deve fazer POST para API do Next.js/FastAPI
 
+**IMPORTANTE - Consentimento e Transparência (LGPD):**
+- Antes do .exe executar, mostre modal/tela de consentimento explícito:
+  * "Coletaremos apenas dados de hardware do seu PC (CPU, GPU, RAM, etc.)"
+  * "Os dados serão usados exclusivamente para sugerir upgrades"
+  * "Nenhum dado pessoal ou arquivo será acessado"
+  * Botões: "Aceito e Continuar" / "Cancelar"
+- Salve timestamp e hash do consentimento junto com os dados
+- Opção de recusar sem consequências (apenas não faz a análise)
+
 **Parte 2 - API Endpoint:**
 - Crie endpoint `/api/analyze-hardware` (Next.js) ou FastAPI
 - Receba os dados do hardware via POST
 - Valide e sanitize os dados recebidos
 - Salve em cookie seguro (httpOnly, sameSite) ou sessionStorage
 - Retorne um token de sessão único
+- **Salve log de consentimento:** user_id/session_id, timestamp, consent_given: true, ip_hash (hash SHA256)
 
 **Segurança:**
 - Rate limiting (máximo 5 análises por IP/hora)
 - Validação de origem do request
 - Sanitização de dados
 - CORS configurado
+- **Retenção de dados:** Deletar dados de hardware após 7 dias (TTL automático)
+- **Hash de IP:** Nunca salve IP completo, use hash SHA256 para compliance LGPD
 
 Me forneça o código Python para o .exe e o endpoint da API.
 ```
@@ -314,6 +335,9 @@ Implemente sistema modular de inserção de links de afiliado (referral).
 - Aplica transformação baseada na config
 - Valida URL final (teste de acesso)
 - Logging de cliques (analytics)
+- **Disclosure de afiliados:** Em cada link de produto, adicione texto:
+  * "🔗 Link com comissão - Recebemos uma pequena comissão se você comprar através deste link, sem custo adicional para você."
+  * Posição: Abaixo do botão "Ver na Loja" em fonte pequena mas legível
 
 **Tipos de Afiliação:**
 1. Query Parameter: `?ref=id`
@@ -351,8 +375,10 @@ Desenvolva a página de exibição de sugestões de upgrade com UX premium.
      * Nome + especificações principais
      * Preço do produto
      * Estimativa de frete: "+ Frete ~R$ 100" (texto simples, sem cálculo)
+     * Disclaimer: "⚠️ As sugestões são informativas. Verifique compatibilidade antes de comprar."
      * Botão "Ver na Loja" (abre em nova aba)
      * Ícone da loja
+     * Texto pequeno: "🔗 Link com comissão"
 
 3. **Comparador de Performance:**
    - Gráfico de barras: Antes vs Depois
@@ -473,8 +499,10 @@ Implemente sistema de alertas de queda de preço para usuários.
 
 1. **Opção "Avisar quando baixar" em cada produto:**
    - Modal com input de email
-   - Checkbox: "Aceito receber notificações"
+   - Checkbox obrigatório: "Aceito receber notificações de preço por email"
+   - Link para Política de Privacidade
    - Threshold: "Avisar se cair X% ou R$ Y"
+   - **Double opt-in:** Envie email de confirmação antes de ativar alerta
 
 2. **Banco de Dados:**
    - Tabela `price_alerts`: user_email, product_id, threshold_percent, threshold_value, created_at
@@ -491,12 +519,15 @@ Implemente sistema de alertas de queda de preço para usuários.
      * Imagem do produto
      * Preço anterior vs atual (destaque na economia)
      * Botão CTA "Ver Oferta" (com link de afiliado)
-     * Link para "Cancelar alertas"
+     * Disclaimer: "Este é um link de afiliado. Recebemos comissão."
+     * Link para "Cancelar alertas" (unsubscribe de 1 clique)
 
-5. **Compliance:**
-   - Double opt-in para emails
-   - Link de unsubscribe em todos os emails
-   - Respeite LGPD (consent explícito)
+5. **Compliance (LGPD obrigatório):**
+   - **Double opt-in:** Envie email "Confirme seu alerta de preço" antes de ativar
+   - **Unsubscribe fácil:** Link de cancelamento em TODOS os emails (footer)
+   - **Consentimento explícito:** Checkbox + texto claro sobre uso do email
+   - **Direito ao esquecimento:** Botão "Excluir meus dados" na página de configurações
+   - **Logs de consentimento:** Salve timestamp + IP hash de cada opt-in
 
 Implemente o sistema de alertas com email template incluso.
 ```
@@ -674,12 +705,39 @@ Finalize o projeto para lançamento público.
 
 **Checklist de Lançamento:**
 
-**Legal/Compliance:**
-- [ ] Política de Privacidade (template LGPD)
-- [ ] Termos de Uso
-- [ ] Cookie consent banner
-- [ ] Página "Sobre"
-- [ ] Contato/Suporte
+**Legal/Compliance (PRIORIDADE MÁXIMA):**
+- [ ] **Política de Privacidade (LGPD compliant):**
+  * Explicar quais dados coletamos (hardware, email, cookies)
+  * Finalidade: sugestões de upgrade, alertas de preço
+  * Base legal: consentimento explícito
+  * Retenção: 7 dias (hardware), até cancelamento (emails)
+  * Direitos do titular: acesso, correção, exclusão, portabilidade
+  * Contato do responsável: email visível
+  * Template: use gerador LGPD ou advogado especializado
+  
+- [ ] **Termos de Uso:**
+  * Isenção de responsabilidade: "Sugestões são informativas, não garantimos compatibilidade"
+  * Limitação de responsabilidade por compras
+  * Uso aceitável do serviço
+  * Propriedade intelectual
+  
+- [ ] **Cookie Consent Banner:**
+  * Banner visível ao entrar no site
+  * Opções: "Aceitar Todos" / "Apenas Essenciais" / "Configurar"
+  * Salvar preferência em localStorage
+  * Documentar cookies usados (Analytics, sessão, preferências)
+  
+- [ ] **Affiliate Disclosure:**
+  * Página dedicada "/afiliados" explicando modelo de receita
+  * Texto em cada produto: "Recebemos comissão se você comprar"
+  * Compliance com termos de cada loja (Kabum, Amazon, etc)
+  
+- [ ] **Página "Sobre":**
+  * Quem somos, missão, contato
+  
+- [ ] **Contato/Suporte:**
+  * Email visível para LGPD: privacidade@seudominio.com
+  * Formulário de contato
 
 **Marketing:**
 - [ ] Logo profissional (Figma)
@@ -692,12 +750,20 @@ Finalize o projeto para lançamento público.
 - [ ] README.md completo
 - [ ] Documentação de API
 - [ ] Changelog
+- [ ] **Documentação de Compliance:**
+  * Processo de tratamento de dados (LGPD)
+  * Logs de consentimento e exclusões
+  * Procedimento para atender requisições de dados
 
 **Performance Final:**
 - [ ] Lighthouse score > 90 (todas as métricas)
 - [ ] Testes de carga (Loader.io)
 - [ ] Otimização de banco de dados (índices)
 - [ ] Rate limiting em produção
+- [ ] **Testes de compliance:**
+  * Testar fluxo completo de opt-in/opt-out
+  * Verificar se dados são deletados após TTL
+  * Validar que unsubscribe funciona em 1 clique
 
 **Lançamento Soft:**
 1. Beta fechado: 50 usuários selecionados
@@ -829,6 +895,9 @@ Ferramentas para gestão e crescimento. Implementar quando já houver tração e
 - Estrutura HTML pode mudar (monitore e ajuste)
 - CAPTCHAs (considere serviços de resolução)
 - **Deduplicação crítica:** Mesma URL + Loja = mesmo produto (não duplicar!)
+- **Compliance:** Respeite robots.txt, use rate limiting (1 req/s), identifique seu bot no User-Agent
+- **Propriedade intelectual:** Salve apenas dados factuais (preço, specs), não copie textos/imagens marketing
+- **Documentação:** Mantenha log de sources (URL + timestamp + hash) para auditoria
 
 ⚠️ **Estimativa de Frete:**
 - Utilizar valor aproximado fixo ("~R$ 100") simplifica muito o desenvolvimento
@@ -838,6 +907,14 @@ Ferramentas para gestão e crescimento. Implementar quando já houver tração e
 ⚠️ **Compatibilidade de Hardware:**
 - Banco de dados de compatibilidade é extenso
 - Necessita validação constante com novos lançamentos
+
+⚠️ **Legal e Compliance (CRÍTICO):**
+- **LGPD obrigatória:** Política de Privacidade + Termos + Consentimentos explícitos
+- **Disclaimers visíveis:** "Sugestões informativas, verifique compatibilidade"
+- **Afiliados:** Disclosure claro em todos os links
+- **Retenção de dados:** TTL de 7 dias para hardware, logs de consentimento
+- **Direito ao esquecimento:** Implementar fluxo de exclusão de dados
+- **Recomendação:** Contratar advogado especialista em LGPD antes do lançamento público
 
 ### Monetização
 
