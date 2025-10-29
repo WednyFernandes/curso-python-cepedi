@@ -76,12 +76,3 @@ Repositório para fins educacionais. Não foi aplicada uma licença formal — s
 ## ✉️ Contato
 
 Repositório mantido por WednyFernandes — veja o perfil no GitHub: https://github.com/WednyFernandes
-
----
-
-Obrigado por explorar os exercícios! Se quiser, posso também:
-
-- adicionar um arquivo `requirements.txt` (se houver dependências),
-- criar um `README` por pasta explicando os exercícios dentro dela, ou
-- adicionar pequenos scripts de execução (ex.: `run_example.py`) para facilitar testes.
-
