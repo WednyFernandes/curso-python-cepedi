@@ -1,6 +1,3 @@
-## ✨ Visão Geral
-
-Este repositório contém exercícios práticos que abordam:
 # 🐍 Curso de Python - CEPEDI
 
 ![Repo size](https://img.shields.io/github/repo-size/WednyFernandes/curso-python-cepedi)
