@@ -1,14 +1,3 @@
-
-# 🐍 Curso de Python - CEPEDI
-
-![GitHub repo size](https://img.shields.io/github/repo-size/WednyFernandes/curso-python-cepedi)
-![GitHub last commit](https://img.shields.io/github/last-commit/WednyFernandes/curso-python-cepedi)
-![GitHub stars](https://img.shields.io/github/stars/WednyFernandes/curso-python-cepedi?style=social)
-
-Bem-vindo ao repositório dos exercícios do curso de Python do CEPEDI! Este projeto reúne programas simples desenvolvidos para o aprendizado dos fundamentos da linguagem Python.
-
----
-
 ## ✨ Visão Geral
 
 Este repositório contém exercícios práticos que abordam:
