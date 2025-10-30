@@ -8,17 +8,17 @@ Conceitos praticados:
 - Função print()
 """
 
-começo = int(input("Digite o número inicial para ver a tabuada: "))
+comeco = int(input("Digite o número inicial para ver a tabuada: "))
 final = int(input("Digite o número final da tabuada: "))
 
-for i in range(começo, final + 1):
+for i in range(comeco, final + 1):
     print(f"\nTabuada do {i}:")
     for j in range(1, 11):
         resultado = i * j
         print(f"{i} x {j} = {resultado}")
 
-if final < começo:
-    for i in reversed(range(final, começo + 1)):
+if final < comeco:
+    for i in reversed(range(final, comeco + 1)):
         print(f"\nTabuada do {i} (de trás para frente):")
         for j in (range(1, 11)):
             resultado = i * j

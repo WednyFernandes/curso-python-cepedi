@@ -10,7 +10,6 @@ Conceitos praticados:
 - Operações aritméticas
 - Operadores de comparação
 - Estruturas condicionais (if-else)
-- Operadores lógicos (implicito no %)
 """
 
 num1 = float(input("Digite o primeiro número: "))
