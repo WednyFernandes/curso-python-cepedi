@@ -95,6 +95,123 @@ INSERT INTO pessoa (nome, idade) VALUES ('Ana', 30), ('Bruno', 25);
 SELECT * FROM pessoa;
 ```
 
+## Comandos SQL básicos
+
+Aqui vão exemplos e trechos dos comandos SQL mais usados, úteis tanto no `psql` quanto em scripts e aplicações.
+
+- CREATE DATABASE / CREATE TABLE
+
+```sql
+-- criar um banco
+CREATE DATABASE meudb;
+
+-- criar uma tabela com tipos e restrições
+CREATE TABLE produto (
+	id SERIAL PRIMARY KEY,
+	nome TEXT NOT NULL,
+	preco NUMERIC(10,2) DEFAULT 0.0,
+	estoque INT DEFAULT 0,
+	criado_em TIMESTAMP WITH TIME ZONE DEFAULT now()
+);
+```
+
+- DROP (remover objetos)
+
+```sql
+DROP TABLE IF EXISTS produto;
+DROP DATABASE IF EXISTS meudb;
+DROP ROLE IF EXISTS meuusuario;
+```
+
+- INSERT, UPDATE, DELETE
+
+```sql
+-- inserir linhas
+INSERT INTO produto (nome, preco, estoque) VALUES ('Caneta', 3.50, 100);
+
+-- atualizar
+UPDATE produto SET preco = preco * 1.10 WHERE id = 1;
+
+-- deletar
+DELETE FROM produto WHERE estoque = 0;
+```
+
+- SELECT básico e filtros
+
+```sql
+-- selecionar todas as colunas
+SELECT * FROM produto;
+
+-- selecionar com filtro
+SELECT id, nome, preco FROM produto WHERE preco > 10.00 ORDER BY preco DESC LIMIT 10;
+
+-- DISTINCT
+SELECT DISTINCT nome FROM produto;
+```
+
+- Agregação, GROUP BY e HAVING
+
+```sql
+-- totais por produto/categoria
+SELECT nome, SUM(estoque) AS total_estoque, AVG(preco) AS preco_medio
+FROM produto
+GROUP BY nome
+HAVING SUM(estoque) > 0;
+```
+
+- JOINs (uniões entre tabelas)
+
+```sql
+-- exemplo com duas tabelas: cliente e pedido
+CREATE TABLE cliente (id SERIAL PRIMARY KEY, nome TEXT);
+CREATE TABLE pedido (id SERIAL PRIMARY KEY, cliente_id INT REFERENCES cliente(id), total NUMERIC);
+
+-- INNER JOIN: retorna apenas correspondências
+SELECT c.nome, p.total
+FROM cliente c
+INNER JOIN pedido p ON p.cliente_id = c.id;
+
+-- LEFT JOIN: todos os clientes, com pedidos quando existirem
+SELECT c.nome, p.total
+FROM cliente c
+LEFT JOIN pedido p ON p.cliente_id = c.id;
+```
+
+- Índices e performance
+
+```sql
+-- criar índice para acelerar buscas por nome
+CREATE INDEX idx_produto_nome ON produto(nome);
+
+-- remover índice
+DROP INDEX IF EXISTS idx_produto_nome;
+```
+
+- ALTER TABLE (modificar estrutura)
+
+```sql
+-- adicionar coluna
+ALTER TABLE produto ADD COLUMN modelo TEXT;
+
+-- remover coluna
+ALTER TABLE produto DROP COLUMN modelo;
+```
+
+- Transações
+
+```sql
+BEGIN;
+UPDATE produto SET estoque = estoque - 1 WHERE id = 1;
+-- checar integridade, outras operações...
+COMMIT; -- ou ROLLBACK; em caso de erro
+```
+
+Notas rápidas:
+- Sempre termine comandos SQL com ponto e vírgula `;` no `psql`.
+- Para aplicações, nunca monte queries concatenando strings (risco de SQL injection) — prefira queries parametrizadas (ex.: psycopg2, pg8000, SQLAlchemy).
+- Use `EXPLAIN` / `EXPLAIN ANALYZE` para analisar planos de consulta quando precisar otimizar.
+
+
 ## 8. Backup e restore (linha de comando)
 
 Dump em formato custom (recomendado):
