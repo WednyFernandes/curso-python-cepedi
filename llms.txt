@@ -1,0 +1,16 @@
+# curso-python-cepedi
+
+> Collection of small, standalone Python 3 exercise scripts from the CEPEDI Python course for beginners, covering input and output, arithmetic, conditionals, for and while loops, lists, dictionaries, functions and exception handling. It also includes Portuguese study notes on Git commands and on installing and running PostgreSQL with pgAdmin on Windows. Code comments, prompts and notes are in Portuguese.
+
+## Files
+- [README](https://github.com/WednyFernandes/curso-python-cepedi/blob/wedny-fernandes/README.md): overview, exercise list, how to run
+- [python_geral/](https://github.com/WednyFernandes/curso-python-cepedi/blob/wedny-fernandes/python_geral): standalone exercise scripts (atv01–atv12 and other practice files), each with a docstring header
+- [Git quick guide](https://github.com/WednyFernandes/curso-python-cepedi/blob/wedny-fernandes/github/GIT-APRENDIZADO.md): config, branches, remotes, stash, tags, .gitignore (Portuguese)
+- [PostgreSQL on Windows guide](https://github.com/WednyFernandes/curso-python-cepedi/blob/wedny-fernandes/postgresql/postgresql-basico.md): install, psql, basic SQL, pg_dump/pg_restore, pgAdmin (Portuguese)
+
+## Key facts
+- Requires Python 3.8+ (3.10/3.11 recommended); only the standard library is used, nothing to install
+- Run any script directly, e.g. `python .\python_geral\atv03-medianota.py`
+- Each file in python_geral/ is an independent exercise; scripts don't depend on each other
+- python_poo/ is a placeholder for object-oriented programming exercises
+- Default branch: wedny-fernandes. Maintainer: Wedny Fernandes (github.com/WednyFernandes)
